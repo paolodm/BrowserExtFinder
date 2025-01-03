@@ -12,6 +12,7 @@ if (Test-Path $chromePath) {
                 Browser = "Chrome"
                 Name = $manifest.name
                 Version = $manifest.version
+                ID = $_.Name
                 Path = $_.FullName
             }
         }
@@ -31,6 +32,7 @@ if (Test-Path $firefoxProfiles) {
                     Browser = "Firefox"
                     Name = $_.defaultLocale.name
                     Version = $_.version
+                    ID = $_.id
                     Path = $_.path
                 }
             }
@@ -49,6 +51,7 @@ if (Test-Path $edgePath) {
                 Browser = "Edge"
                 Name = $manifest.name
                 Version = $manifest.version
+                ID = $_.Name
                 Path = $_.FullName
             }
         }
@@ -57,4 +60,4 @@ if (Test-Path $edgePath) {
 }
 
 # Output results
-$extensions | Format-Table Browser, Name, Version, Path -AutoSize
+$extensions | Format-Table Browser, Name, Version, ID, Path -AutoSize
