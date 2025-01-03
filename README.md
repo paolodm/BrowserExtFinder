@@ -1,10 +1,11 @@
 # BrowserExtFinder
+
 A PowerShell script that scans and inventories browser extensions across Chrome, Firefox, and Edge browsers. The tool provides detailed information including extension names, versions, and file paths in an organized table format.
 
 ## Features
 
 - Scans multiple browsers (Chrome, Firefox, Edge)
-- Retrieves extension names, versions, and file paths
+- Retrieves extension names, versions, IDs, and file paths
 - Outputs results in a clean, formatted table
 - Error handling for missing browser installations
 - Support for default browser profiles
@@ -36,11 +37,11 @@ Run the script directly in PowerShell:
 
 Example output:
 ```
-Browser  Name                    Version  Path
--------  ----                    -------  ----
-Chrome   uBlock Origin           1.52.0   C:\Users\...\Extensions\ublock-origin
-Firefox  Dark Reader            4.9.67    C:\Users\...\Extensions\darkreader
-Edge     LastPass               4.116.0   C:\Users\...\Extensions\lastpass
+Browser  Name           Version  ID                                      Path
+-------  ----           -------  --                                      ----
+Chrome   uBlock Origin  1.52.0   cjpalhdlnbpafiamejdnhcphjbkeiagm      C:\Users\...\Extensions\ublock-origin
+Firefox  Dark Reader    4.9.67   addon@darkreader.org                   C:\Users\...\Extensions\darkreader
+Edge     LastPass       4.116.0  hdokiejnpimakedhajhdlcegeplioahd      C:\Users\...\Extensions\lastpass
 ```
 
 ## Supported Browsers and Paths
